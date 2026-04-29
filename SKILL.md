@@ -1,9 +1,17 @@
 ﻿---
 name: gemini-browser-image
-description: 使用 Chrome 浏览器 + Gemini 生成 AI 图片并下载到本地。通过 mcporter + chrome-devtools-mcp 控制浏览器，模拟人工操作生成图片。当需要生成图片、插画、配图时使用此技能，特别是需要 AI 生成风格的图片（如文章配图、封面图、社交媒体图片等）。触发场景：(1) 用户要求生成图片 (2) 需要 AI 生成插图 (3) 文章/推送需要配图 (4) 用户说"生成一张图片"、"画一个xxx"、"帮我做个图"
+description: Generate images with the user\'s own Chrome session and Gemini web UI. Use for article covers, illustrations, and social media visuals when the user explicitly asks for image generation or article images. Requires an already-authorized Gemini account and user-controlled browser session; does not handle credentials, bypass access controls, or solve CAPTCHAs.
 ---
 
 # Gemini Browser Image
+
+## Safety boundaries
+
+- Use only with the user's own browser profile and Gemini account.
+- Do not bypass login, paywalls, CAPTCHAs, rate limits, or access controls.
+- Do not extract, store, print, or publish cookies, tokens, browser profile data, or account secrets.
+- If Gemini blocks a prompt or generation fails, revise the prompt or ask the user; do not attempt evasion.
+- Download only the image assets generated for the current user-requested task.
 
 ## 概述
 
@@ -299,4 +307,5 @@ Get-ChildItem $env:USERPROFILE\Downloads -File | Where-Object { $_.Name -like "G
 | 点击下载没反应 | 等更长时间，用快照确认下载按钮存在 |
 | 下载的文件是空的 | 重新点击下载按钮，或刷新页面重试 |
 | 提示词不执行 | 确认输入框已获得焦点，可先点击输入框再 fill |
+
 
