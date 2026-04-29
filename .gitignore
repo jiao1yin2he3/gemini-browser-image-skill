@@ -1,0 +1,23 @@
+# Secrets and local browser data
+.env
+.env.*
+*.secret
+*.token
+cookies*.json
+User Data/
+chrome-profile/
+
+# Generated media
+Downloads/
+outputs/
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+
+# Runtime/editor noise
+.DS_Store
+Thumbs.db
+node_modules/
+.openclaw/
