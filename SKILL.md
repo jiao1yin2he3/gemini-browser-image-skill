@@ -1,6 +1,6 @@
 ﻿---
 name: gemini-browser-image
-description: Generate images with the user\'s own Chrome session and Gemini web UI. Use for article covers, illustrations, and social media visuals when the user explicitly asks for image generation or article images. Requires an already-authorized Gemini account and user-controlled browser session; does not handle credentials, bypass access controls, or solve CAPTCHAs.
+description: Generate images with the user's own Chrome session and Gemini web UI. Use for article covers, illustrations, and social media visuals when the user explicitly asks for image generation or article images. Requires an already-authorized Gemini account and user-controlled browser session; does not handle credentials, bypass access controls, or solve CAPTCHAs.
 ---
 
 # Gemini Browser Image
@@ -307,5 +307,6 @@ Get-ChildItem $env:USERPROFILE\Downloads -File | Where-Object { $_.Name -like "G
 | 点击下载没反应 | 等更长时间，用快照确认下载按钮存在 |
 | 下载的文件是空的 | 重新点击下载按钮，或刷新页面重试 |
 | 提示词不执行 | 确认输入框已获得焦点，可先点击输入框再 fill |
+
 
 
